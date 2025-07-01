@@ -1,0 +1,98 @@
+/* Mejoras para el menú persistente */
+#header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+} /* Fondo del header*/
+#header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: 0 2rem;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #cc9933; /* Oro claro */
+} /* Logo en oro claro*/
+.logo-separator {
+  margin: 0 0.5rem;
+  font-weight: normal;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-menu li {
+  display: flex;
+  align-items: center;
+}
+.nav-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  color: #fff; /* Texto de menú en blanco */
+} /* Menú principal texto blanco */
+.nav-menu a.active, .nav-menu a:hover {
+  background: #cc9933; /* Oro claro */
+  color: black !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+} /* Hover en menú: fondo oro claro, texto azul oscuro */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 6px;
+}
+.mobile-menu-btn span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: currentColor;
+  border-radius: 2px;
+}
+@media (max-width: 900px) {
+  #header .container {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: unset;
+    padding: 0 1rem;
+  }
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  .mobile-menu-btn {
+    display: flex;
+    margin-left: auto;
+  }
+}
