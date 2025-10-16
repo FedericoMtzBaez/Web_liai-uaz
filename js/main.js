@@ -7,6 +7,7 @@ import { setupFilters } from './filters.js';
 import { setupCounters } from './counters.js';
 import { setupForms } from './forms.js';
 import { setupAnimations } from './animations.js';
+import { setupBootstrapIntegration } from './bootstrap-integration.js';
 
 // DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCounters();
   setupForms();
   setupAnimations();
+  setupBootstrapIntegration();
 });

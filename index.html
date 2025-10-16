@@ -17,9 +17,8 @@
     <div class="container">
       <div class="logo">
         <a href="#hero">
+          <img src="Logotipo.png" alt="LIAI Logo" class="logo-image">
           <span>LIAI</span>
-          <span class="logo-separator">|</span>
-          <span class="logo-uaz">UAZ</span>
         </a>
       </div>
       <nav>
@@ -30,13 +29,25 @@
         </button>
         <ul class="nav-menu">
           <li><a href="#hero" class="active">Inicio</a></li>
-          <li><a href="#acerca">Acerca de</a></li>
-          <li><a href="#campos">Campos de Acción</a></li>
-          <li><a href="#publicaciones">Publicaciones</a></li>
-          <li><a href="#colaboradores">Colaboradores</a></li>
-          <li><a href="#vacantes">Vacantes</a></li>
-          <li><a href="#produccion">Producción</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#acerca">Acerca</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Investigación <i class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#campos">Campos de Acción</a></li>
+              <li><a href="#publicaciones">Publicaciones</a></li>
+              <li><a href="#propiedad">Propiedad Industrial</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Equipo <i class="fas fa-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#integrantes">Integrantes</a></li>
+              <li><a href="#colaboradores">Colaboradores</a></li>
+              <li><a href="#estudiantes">Estudiantes</a></li>
+            </ul>
+          </li>
+          <li><a href="cuerpo_academico.html">Cuerpo Académico</a></li>
+          <li><a href="#contacto" class="btn btn-outline-primary btn-sm">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -48,7 +59,7 @@
       <div class="hero-carousel">
         <div class="carousel-container">
           <div class="carousel-slide active"
-            style="background-image: url('https://www.uaz.edu.mx/imagenes/slider/slider1.jpg')">
+            style="background-image: url('uazFoto.jpeg')">
             <div class="carousel-content">
               <h1>Laboratorio de Invenciones Aplicadas a la Industria</h1>
               <p>Innovación y desarrollo tecnológico al servicio de la sociedad</p>
@@ -84,218 +95,85 @@
       </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <div class="stat-icon"><i class="fas fa-flask"></i></div>
-            <div class="stat-number" data-count="42">0</div>
-            <div class="stat-title">Proyectos</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
-            <div class="stat-number" data-count="36">0</div>
-            <div class="stat-title">Publicaciones</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-icon"><i class="fas fa-users"></i></div>
-            <div class="stat-number" data-count="24">0</div>
-            <div class="stat-title">Colaboradores</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
-            <div class="stat-number" data-count="58">0</div>
-            <div class="stat-title">Egresados</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- About Section -->
-    <section id="acerca" class="section">
+    <section id="acerca" class="py-5">
       <div class="container">
-        <div class="section-header">
+        <div class="text-center mb-5">
           <h2 class="section-title">Acerca del Laboratorio</h2>
-          <div class="section-separator"></div>
+          <div class="section-separator mx-auto"></div>
         </div>
-        <div class="about-content">
-          <div class="about-text">
-            <p>El <strong>Laboratorio de Invenciones Aplicadas a la Industria (LIAI)</strong> es una unidad académica de
-              la Universidad Autónoma de Zacatecas dedicada a la investigación, desarrollo e innovación tecnológica con
-              aplicación directa en el sector industrial y productivo.</p>
-            <p>Fundado en 2012, nuestro laboratorio facilita la formación de estudiantes a nivel licenciatura, maestría
-              y doctorado mediante proyectos aplicados, publicaciones científicas y colaboraciones tecnológicas con el
-              sector productivo regional y nacional.</p>
-            <p>Nuestro enfoque multidisciplinario integra diferentes áreas del conocimiento para abordar problemáticas
-              complejas y desarrollar soluciones innovadoras que contribuyan al desarrollo tecnológico y social de
-              nuestra región.</p>
-            <div class="mission-vision">
-              <div class="mission">
-                <h3><i class="fas fa-bullseye"></i> Misión</h3>
-                <p>Generar conocimiento aplicado y formar recursos humanos de alto nivel que contribuyan al desarrollo
-                  tecnológico y la innovación en el sector industrial.</p>
-              </div>
-              <div class="vision">
-                <h3><i class="fas fa-eye"></i> Visión</h3>
-                <p>Ser un referente nacional en investigación aplicada y desarrollo tecnológico, reconocido por su
-                  contribución a la innovación industrial y la formación de especialistas.</p>
-              </div>
+
+        <div class="bg-white p-4 rounded shadow-sm mb-5">
+          <p class="lead mb-4">
+            <strong>El Laboratorio de Invenciones Aplicadas a la Industria (LIAI)</strong> es un centro de
+            investigación y desarrollo orientado a generar soluciones tecnológicas innovadoras para sectores
+            estratégicos como el agroindustrial, el manufacturero y el educativo.
+          </p>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <p>Vinculado a la Universidad Autónoma de Zacatecas, el laboratorio impulsa la colaboración entre
+                academia, industria y sociedad, articulando ciencia, ingeniería y creatividad aplicada.</p>
+              <p>Con un enfoque multidisciplinario, el LIAI trabaja en inteligencia artificial, visión por computadora,
+                automatización, electrónica industrial y cómputo de alto desempeño.</p>
+            </div>
+            <div class="col-md-6">
+              <p>El laboratorio se ha consolidado como un espacio de formación de talento, protección de invenciones y
+                vinculación tecnológica. Su proyección internacional se refleja en colaboraciones con instituciones de
+                América y Asia.</p>
+              <p class="mb-0">El LIAI representa un puente entre el conocimiento y la solución de problemas reales,
+                contribuyendo a una industria más eficiente, sostenible y tecnológicamente avanzada.</p>
             </div>
           </div>
-          <div class="about-image">
-            <img
-              src="https://images.pexels.com/photos/2977547/pexels-photo-2977547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Laboratorio LIAI">
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="bg-white p-4 rounded shadow-sm h-100">
+              <h3 class="h4 mb-3">Visión</h3>
+              <p class="mb-0">Impulsar soluciones tecnológicas innovadoras que transformen procesos productivos en
+                modelos más eficientes, resilientes y sostenibles, conectando talentos, industrias y territorios a
+                través de la colaboración internacional.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="bg-white p-4 rounded shadow-sm h-100">
+              <h3 class="h4 mb-3">Misión</h3>
+              <p class="mb-0">Diseñar, desarrollar y transferir soluciones tecnológicas innovadoras con base científica,
+                integrando inteligencia artificial y sistemas inteligentes para fortalecer los sectores productivos y
+                formar talento especializado.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="bg-white p-4 rounded shadow-sm h-100">
+              <h3 class="h4 mb-3">Valores</h3>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Innovación con propósito</li>
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Ciencia útil y aplicada</li>
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Interdisciplinariedad creativa</li>
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Colaboración estratégica</li>
+                <li class="mb-0"><i class="fas fa-check text-success me-2"></i> Excelencia con sentido humano</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Fields Section -->
+    <!-- Campos de Acción -->
     <section id="campos" class="section section-alt">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Campos de Acción</h2>
+        <header class="section-header">
+          <h2 class="section-title">Investigación y Desarrollo</h2>
           <div class="section-separator"></div>
-          <p class="section-subtitle">Nuestras áreas de especialización e investigación</p>
-        </div>
-        <div class="tabs">
-          <div class="tabs-header">
-            <button class="tab-btn active" data-tab="agrotecnologia">Agrotecnología</button>
-            <button class="tab-btn" data-tab="civiltronica">Civiltrónica</button>
-          </div>
-          <div class="tabs-content">
-            <!-- Agrotecnología Tab -->
-            <div class="tab-panel active" id="agrotecnologia-panel">
-              <div class="field-content">
-                <div class="field-image">
-                  <img
-                    src="https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="Agrotecnología">
-                </div>
-                <div class="field-info">
-                  <h3>Agrotecnología</h3>
-                  <p>Desarrollamos soluciones tecnológicas aplicadas al sector agrícola, incluyendo sistemas de
-                    monitoreo, automatización de procesos y optimización de recursos para aumentar la productividad y
-                    sostenibilidad.</p>
+          <h2 class="section-subtitle">Campos de Investigación</h2>
+        </header>
 
-                  <div class="field-details">
-                    <div class="collapsible">
-                      <button class="collapsible-btn">
-                        <span>Líneas de conocimiento</span>
-                        <i class="fas fa-chevron-down"></i>
-                      </button>
-                      <div class="collapsible-content">
-                        <ul>
-                          <li>Sistemas de riego inteligente</li>
-                          <li>Monitoreo de variables agroclimáticas</li>
-                          <li>Automatización de procesos agrícolas</li>
-                          <li>Diseño de invernaderos tecnificados</li>
-                          <li>Agricultura de precisión</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="collapsible">
-                      <button class="collapsible-btn">
-                        <span>Especializaciones</span>
-                        <i class="fas fa-chevron-down"></i>
-                      </button>
-                      <div class="collapsible-content">
-                        <ul>
-                          <li>Sistemas embebidos para monitoreo agrícola</li>
-                          <li>IoT aplicado a la agricultura</li>
-                          <li>Sensórica avanzada para cultivos</li>
-                          <li>Inteligencia artificial en procesos agrícolas</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="collapsible">
-                      <button class="collapsible-btn">
-                        <span>Niveles académicos</span>
-                        <i class="fas fa-chevron-down"></i>
-                      </button>
-                      <div class="collapsible-content">
-                        <ul>
-                          <li>Licenciatura en Ingeniería Agrónoma</li>
-                          <li>Licenciatura en Ingeniería Electrónica</li>
-                          <li>Maestría en Tecnología Aplicada</li>
-                          <li>Doctorado en Ciencias de la Ingeniería</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Civiltrónica Tab -->
-            <div class="tab-panel" id="civiltronica-panel">
-              <div class="field-content">
-                <div class="field-image">
-                  <img
-                    src="https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="Civiltrónica">
-                </div>
-                <div class="field-info">
-                  <h3>Civiltrónica</h3>
-                  <p>Integramos tecnologías electrónicas y digitales en el campo de la ingeniería civil para el
-                    desarrollo de infraestructuras inteligentes, monitoreo estructural y sistemas de construcción
-                    avanzados.</p>
-
-                  <div class="field-details">
-                    <div class="collapsible">
-                      <button class="collapsible-btn">
-                        <span>Líneas de conocimiento</span>
-                        <i class="fas fa-chevron-down"></i>
-                      </button>
-                      <div class="collapsible-content">
-                        <ul>
-                          <li>Monitoreo estructural inteligente</li>
-                          <li>Automatización en sistemas constructivos</li>
-                          <li>Edificios inteligentes</li>
-                          <li>Instrumentación y sensorización de obras civiles</li>
-                          <li>Modelado y simulación de estructuras</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="collapsible">
-                      <button class="collapsible-btn">
-                        <span>Especializaciones</span>
-                        <i class="fas fa-chevron-down"></i>
-                      </button>
-                      <div class="collapsible-content">
-                        <ul>
-                          <li>Sistemas embebidos para monitoreo estructural</li>
-                          <li>IoT aplicado a la construcción</li>
-                          <li>Análisis de vibraciones en estructuras</li>
-                          <li>Eficiencia energética en edificios</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="collapsible">
-                      <button class="collapsible-btn">
-                        <span>Niveles académicos</span>
-                        <i class="fas fa-chevron-down"></i>
-                      </button>
-                      <div class="collapsible-content">
-                        <ul>
-                          <li>Licenciatura en Ingeniería Civil</li>
-                          <li>Licenciatura en Ingeniería Electrónica</li>
-                          <li>Maestría en Ingeniería Estructural</li>
-                          <li>Doctorado en Ciencias de la Ingeniería</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="text-center">
+          <span class="tab-btn">Agrotecnología</span>
+          <span class="tab-btn">Civiltrónica</span>
         </div>
       </div>
     </section>
@@ -304,115 +182,153 @@
     <section id="publicaciones" class="section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Publicaciones Recientes</h2>
+          <h2 class="section-title">Publicación de Artículos</h2>
           <div class="section-separator"></div>
-          <p class="section-subtitle">Artículos científicos y proyectos desarrollados en nuestro laboratorio</p>
+          <p class="section-subtitle">Recientes</p>
         </div>
-        <div class="filter-controls">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="agrotecnologia">Agrotecnología</button>
-          <button class="filter-btn" data-filter="civiltronica">Civiltrónica</button>
+        <div class="publications-list-wrapper">
+          <ul class="publications-list">
+            <li class="publication-item">
+              <div class="publication-info">
+                <strong>Design and Implementation of a Low-Cost Controlled-Environment Growth Chamber for Vegetative
+                  Propagation of Mother Plants.</strong>
+                <div class="publication-meta">
+                  AgriEngineering 2025,
+                  <a href="https://doi.org/10.3390/agriengineering7060177" target="_blank" rel="noopener">DOI</a>
+                </div>
+              </div>
+            </li>
+            <li class="publication-item">
+              <div class="publication-info">
+                <strong>Low-Scalability Distributed Systems for Artificial Intelligence: A Comparative Study of
+                  Distributed Deep Learning Frameworks for Image Classification.</strong>
+                <div class="publication-meta">
+                  Appl. Sci. 2025,
+                  <a href="https://doi.org/10.3390/app15116251" target="_blank" rel="noopener">DOI</a>
+                </div>
+              </div>
+            </li>
+            <li class="publication-item">
+              <div class="publication-info">
+                <strong>AI-Driven Plant Health Assessment: A Comparative Analysis of Inception V3, ResNet-50 and ViT
+                  with SHAP for Accurate Disease Identification in Taro.</strong>
+                <div class="publication-meta">
+                  Agronomy 2025,
+                  <a href="https://doi.org/10.3390/agronomy15010077" target="_blank" rel="noopener">DOI</a>
+                </div>
+              </div>
+            </li>
+
+            <p class="section-subtitle">Más citados</p>
+
+            <li class="publication-item">
+              <div class="publication-info">
+                <strong>Comparison of Convolutional Neural Network Architectures for Classification of Tomato Plant
+                  Diseases.</strong>
+                <div class="publication-meta">
+                  Appl. Sci. 2020,
+                  <a href="https://doi.org/10.3390/app10041245" target="_blank" rel="noopener">DOI</a>
+                </div>
+              </div>
+            </li>
+            <li class="publication-item">
+              <div class="publication-info">
+                <strong>Effects of Colored Light on Growth and Nutritional Composition of Tilapia, and Biofloc as a Food
+                  Source.</strong>
+                <div class="publication-meta">
+                  Appl. Sci. 2020,
+                  <a href="https://doi.org/10.3390/app10010362" target="_blank" rel="noopener">DOI</a>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="publications-grid">
-          <!-- Publication 1 -->
-          <div class="publication-card" data-category="agrotecnologia">
-            <div class="publication-image">
-              <img
-                src="https://images.pexels.com/photos/3680389/pexels-photo-3680389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Sistema de monitoreo agrícola">
-            </div>
-            <div class="publication-content">
-              <div class="publication-tag">Agrotecnología</div>
-              <h3 class="publication-title">Sistema IOT para monitoreo de variables agroclimáticas</h3>
-              <p class="publication-authors">García M., Rodríguez L., Martínez J.</p>
-              <p class="publication-date">Diciembre 2023</p>
-              <p class="publication-excerpt">Desarrollo de un sistema basado en IoT para el monitoreo en tiempo real de
-                variables ambientales en cultivos de tomate bajo invernadero.</p>
-              <a href="#" class="btn btn-text">Leer más <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Propiedad Industrial -->
+    <section id="propiedad" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Propiedad Industrial</h2>
+          <div class="section-separator"></div>
+        </div>
+        <div class="section-content">
+          <p>El LIAI fomenta la innovación con registros de propiedad industrial:</p>
+          <ul>
+            <li><strong>Modelo de utilidad:</strong> Cámara modular para esquejes (IMPI, en proceso de registro 2025).
+            </li>
+            <li><strong>Modelo de utilidad:</strong> Cámara de crecimiento para la producción de forraje verde
+              hidropónico.</li>
+            <li><strong>Módulo evaporador/absorbedor</strong> para sistemas de refrigeración por absorción.</li>
+            <li><strong>Próximos registros internacionales</strong> a través de la OMPI.</li>
+          </ul>
+          <p>El laboratorio trabaja con un enfoque de transferencia tecnológica, buscando que las invenciones se
+            conviertan en soluciones prácticas para la industria y la agroindustria.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Líneas de Investigación y Desarrollo -->
+    <section class="py-3">
+      <div class="container">
+        <div class="section-header mb-2">
+          <h2 class="section-title mb-2">Líneas de Investigación y Desarrollo</h2>
+        </div>
+        <div class="row justify-content-center text-center g-3">
+          <div class="col-md-2">
+            <div class="p-3 bg-white rounded shadow-sm">
+              <div class="mb-2 text-info">
+                <i class="fas fa-microchip fa-2x"></i>
+              </div>
+              <h5 class="mb-0">Computación de Alto Desempeño</h5>
             </div>
           </div>
 
-          <!-- Publication 2 -->
-          <div class="publication-card" data-category="civiltronica">
-            <div class="publication-image">
-              <img
-                src="https://images.pexels.com/photos/544961/pexels-photo-544961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Monitoreo estructural de puentes">
-            </div>
-            <div class="publication-content">
-              <div class="publication-tag">Civiltrónica</div>
-              <h3 class="publication-title">Sistema de monitoreo estructural para puentes urbanos</h3>
-              <p class="publication-authors">López A., Hernández S., Méndez P.</p>
-              <p class="publication-date">Octubre 2023</p>
-              <p class="publication-excerpt">Diseño e implementación de un sistema de monitoreo estructural basado en
-                sensores de vibración para evaluar la integridad de puentes urbanos.</p>
-              <a href="#" class="btn btn-text">Leer más <i class="fas fa-arrow-right"></i></a>
+          <div class="col-md-2">
+            <div class="p-3 bg-white rounded shadow-sm">
+              <div class="mb-2 text-info">
+                <i class="fas fa-robot fa-2x"></i>
+              </div>
+              <h5 class="mb-0">Inteligencia Artificial Aplicada</h5>
             </div>
           </div>
 
-          <!-- Publication 3 -->
-          <div class="publication-card" data-category="agrotecnologia">
-            <div class="publication-image">
-              <img
-                src="https://images.pexels.com/photos/5212670/pexels-photo-5212670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Riego automatizado">
-            </div>
-            <div class="publication-content">
-              <div class="publication-tag">Agrotecnología</div>
-              <h3 class="publication-title">Optimización de sistemas de riego mediante algoritmos de aprendizaje
-                automático</h3>
-              <p class="publication-authors">Torres R., Vázquez M., Guzmán E.</p>
-              <p class="publication-date">Agosto 2023</p>
-              <p class="publication-excerpt">Implementación de algoritmos de aprendizaje automático para optimizar el
-                uso de agua en sistemas de riego de precisión.</p>
-              <a href="#" class="btn btn-text">Leer más <i class="fas fa-arrow-right"></i></a>
+          <div class="col-md-2">
+            <div class="p-3 bg-white rounded shadow-sm">
+              <div class="mb-2 text-success">
+                <i class="fas fa-tractor fa-2x"></i>
+              </div>
+              <h5 class="mb-0">Tecnología Agroalimentaria</h5>
             </div>
           </div>
 
-          <!-- Publication 4 -->
-          <div class="publication-card" data-category="civiltronica">
-            <div class="publication-image">
-              <img
-                src="https://images.pexels.com/photos/534220/pexels-photo-534220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Edificio inteligente">
-            </div>
-            <div class="publication-content">
-              <div class="publication-tag">Civiltrónica</div>
-              <h3 class="publication-title">Sistema de gestión energética para edificios inteligentes</h3>
-              <p class="publication-authors">Ramírez F., González T., Sánchez C.</p>
-              <p class="publication-date">Julio 2023</p>
-              <p class="publication-excerpt">Desarrollo e implementación de un sistema de gestión energética para
-                optimizar el consumo en edificios inteligentes mediante redes de sensores.</p>
-              <a href="#" class="btn btn-text">Leer más <i class="fas fa-arrow-right"></i></a>
+          <div class="col-md-2">
+            <div class="p-3 bg-white rounded shadow-sm">
+              <div class="mb-2 text-warning">
+                <i class="fas fa-tools fa-2x"></i>
+              </div>
+              <h5 class="mb-0">Diseño funcional y prototipado</h5>
             </div>
           </div>
-        </div>
-        <div class="publications-more">
-          <a href="#" class="btn btn-outline">Ver todas las publicaciones</a>
+
         </div>
       </div>
     </section>
 
     <!-- Collaborators Section -->
-    <section id="colaboradores" class="section section-alt">
+    <section id="integrantes" class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Colaboradores</h2>
+          <h2 class="section-title">Integrantes</h2>
           <div class="section-separator"></div>
-          <p class="section-subtitle">Nuestro equipo de investigadores y colaboradores académicos</p>
         </div>
         <div class="team-grid">
           <!-- Team Member 1 -->
           <div class="team-card">
-            <div class="team-image">
-              <img
-                src="https://images.pexels.com/photos/5490276/pexels-photo-5490276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Dr. Felipe Méndez">
-            </div>
             <div class="team-info">
-              <h3>Dr. Felipe Méndez</h3>
-              <p class="team-position">Director del Laboratorio</p>
-              <p class="team-specialty">Sistemas Electrónicos Aplicados</p>
+              <h3>Dr. Carlos Alberto Olvera Olvera</h3>
+              <p class="team-position">Profesor Investigador Responsable</p>
               <div class="team-social">
                 <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 <a href="#" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
@@ -423,53 +339,9 @@
 
           <!-- Team Member 2 -->
           <div class="team-card">
-            <div class="team-image">
-              <img
-                src="https://images.pexels.com/photos/5325840/pexels-photo-5325840.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Dra. Laura Rodríguez">
-            </div>
             <div class="team-info">
-              <h3>Dra. Laura Rodríguez</h3>
-              <p class="team-position">Investigadora Titular</p>
-              <p class="team-specialty">Agrotecnología y Sensores</p>
-              <div class="team-social">
-                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="#" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Team Member 3 -->
-          <div class="team-card">
-            <div class="team-image">
-              <img
-                src="https://images.pexels.com/photos/5490276/pexels-photo-5490276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Dr. Carlos Hernández">
-            </div>
-            <div class="team-info">
-              <h3>Dr. Carlos Hernández</h3>
-              <p class="team-position">Investigador Asociado</p>
-              <p class="team-specialty">Civiltrónica y Estructuras Inteligentes</p>
-              <div class="team-social">
-                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="#" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Team Member 4 -->
-          <div class="team-card">
-            <div class="team-image">
-              <img
-                src="https://images.pexels.com/photos/5325840/pexels-photo-5325840.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Dra. Martha Vázquez">
-            </div>
-            <div class="team-info">
-              <h3>Dra. Martha Vázquez</h3>
-              <p class="team-position">Investigadora Asociada</p>
-              <p class="team-specialty">Sistemas Embebidos y IoT</p>
+              <h3>Dr. Manuel de Jésus López Martínez </h3>
+              <p class="team-position">Profesor Investigador Asociado</p>
               <div class="team-social">
                 <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 <a href="#" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
@@ -481,196 +353,178 @@
       </div>
     </section>
 
-    <!-- Vacancies Section -->
-    <section id="vacantes" class="section">
+    <!-- Collaborators Section -->
+    <section id="colaboradores" class="section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Vacantes de Proyectos</h2>
+          <h2 class="section-title">Colaboradores</h2>
           <div class="section-separator"></div>
-          <p class="section-subtitle">Oportunidades para realizar proyectos de tesis, estancias o investigación</p>
         </div>
-        <div class="vacancies-grid">
-          <!-- Vacancy 1 -->
-          <div class="vacancy-card">
-            <div class="vacancy-header">
-              <div class="vacancy-tag">Agrotecnología</div>
-              <h3 class="vacancy-title">Desarrollo de sistema de monitoreo para cultivos hidropónicos</h3>
-            </div>
-            <div class="vacancy-content">
-              <div class="vacancy-item">
-                <span class="vacancy-label"><i class="fas fa-user-graduate"></i> Nivel:</span>
-                <span class="vacancy-value">Licenciatura / Maestría</span>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-info">
+              <div class="university-header">
+                <img src="logoUAZ.png" alt="Logo Universidad Autónoma de Zacatecas" class="university-logo">
+                <h3>Universidad Autónoma de Zacatecas</h3>
               </div>
-              <div class="vacancy-item">
-                <span class="vacancy-label"><i class="fas fa-calendar-alt"></i> Duración:</span>
-                <span class="vacancy-value">6-8 meses</span>
-              </div>
-              <div class="vacancy-item">
-                <span class="vacancy-label"><i class="fas fa-user"></i> Asesor:</span>
-                <span class="vacancy-value">Dra. Laura Rodríguez</span>
-              </div>
-              <p class="vacancy-description">Desarrollo de un sistema de monitoreo para variables ambientales y
-                nutrimentales en cultivos hidropónicos utilizando tecnologías IoT y sensórica especializada.</p>
-              <button class="btn btn-primary vacancy-apply-btn"
-                data-vacancy="Sistema de monitoreo para cultivos hidropónicos">Aplicar ahora</button>
+              <p class="team-position">Dr. José Ismael de la Rosa Vargas</p>
+              <p class="team-position">Dr. José Antonio Rodríguez Rodríguez</p>
+              <p class="team-position">Dr. Alfredo Lara Herrera</p>
+              <p class="team-position">Dra. Valeria Maeda Gutiérrez</p>
             </div>
           </div>
 
-          <!-- Vacancy 2 -->
-          <div class="vacancy-card">
-            <div class="vacancy-header">
-              <div class="vacancy-tag">Civiltrónica</div>
-              <h3 class="vacancy-title">Sistema de monitoreo de vibraciones para edificios</h3>
-            </div>
-            <div class="vacancy-content">
-              <div class="vacancy-item">
-                <span class="vacancy-label"><i class="fas fa-user-graduate"></i> Nivel:</span>
-                <span class="vacancy-value">Maestría / Doctorado</span>
+          <div class="team-card">
+            <div class="team-info">
+              <div class="university-header">
+                <img src="logoUAQ.jpg" alt="Logo Universidad Autónoma de Querétaro" class="university-logo">
+                <h3>Universidad Autónoma de Querétaro</h3>
               </div>
-              <div class="vacancy-item">
-                <span class="vacancy-label"><i class="fas fa-calendar-alt"></i> Duración:</span>
-                <span class="vacancy-value">10-12 meses</span>
-              </div>
-              <div class="vacancy-item">
-                <span class="vacancy-label"><i class="fas fa-user"></i> Asesor:</span>
-                <span class="vacancy-value">Dr. Carlos Hernández</span>
-              </div>
-              <p class="vacancy-description">Diseño e implementación de un sistema de monitoreo de vibraciones para
-                evaluar la integridad estructural de edificios utilizando redes de sensores inalámbricos.</p>
-              <button class="btn btn-primary vacancy-apply-btn"
-                data-vacancy="Sistema de monitoreo de vibraciones para edificios">Aplicar ahora</button>
+              <p class="team-position">Dr. Genaro Martín Soto Zarazua</p>
+              <p class="team-position">Dr. Juvenal Rodríguez Reséndiz </p>
             </div>
           </div>
 
-          <!-- Vacancy 3 -->
-          <div class="vacancy-card">
-            <div class="vacancy-header">
-              <div class="vacancy-tag">Agrotecnología</div>
-              <h3 class="vacancy-title">Algoritmos de IA para optimización de recursos hídricos</h3>
+          <div class="team-card">
+            <div class="team-info">
+              <div class="university-header">
+                <img src="logoWVU.png" alt="Logo West Virginia University" class="university-logo">
+                <h3>West Virginia University</h3>
+              </div>
+              <p class="team-position">Dr. Sven Verlinden</p>
             </div>
-            <div class="vacancy-content">
-              <div class="vacancy-item">
-                <span class="vacancy-label"><i class="fas fa-user-graduate"></i> Nivel:</span>
-                <span class="vacancy-value">Maestría / Doctorado</span>
+          </div>
+
+          <div class="team-card">
+            <div class="team-info">
+              <div class="university-header">
+                <img src="logoHAU.jpg" alt="Logo Huazhong Agricultural University" class="university-logo">
+                <h3>Huazhong Agricultural University</h3>
               </div>
-              <div class="vacancy-item">
-                <span class="vacancy-label"><i class="fas fa-calendar-alt"></i> Duración:</span>
-                <span class="vacancy-value">8-10 meses</span>
+              <p class="team-position">Dra. Xizi Chen</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-info">
+              <div class="university-header">
+                <img src="logoTS.png" alt="Logo Tlachia Systems" class="university-logo">
+                <h3>Tlachia Systems, CRD Ingeniería y Consultoría</h3>
               </div>
-              <div class="vacancy-item">
-                <span class="vacancy-label"><i class="fas fa-user"></i> Asesor:</span>
-                <span class="vacancy-value">Dr. Felipe Méndez</span>
-              </div>
-              <p class="vacancy-description">Desarrollo de algoritmos de inteligencia artificial para la optimización
-                del uso de recursos hídricos en sistemas de riego de precisión.</p>
-              <button class="btn btn-primary vacancy-apply-btn"
-                data-vacancy="Algoritmos de IA para optimización de recursos hídricos">Aplicar ahora</button>
+              <p class="team-position">M.C. David Duarte Correa</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Application Form Section (Hidden by default) -->
-    <div class="application-form-overlay">
-      <div class="application-form-container">
-        <button class="form-close-btn"><i class="fas fa-times"></i></button>
-        <h2>Aplicación para Vacante</h2>
-        <p id="selected-vacancy">Vacante seleccionada: <span></span></p>
-        <form id="vacancy-form">
-          <div class="form-group">
-            <label for="name">Nombre completo</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Teléfono</label>
-            <input type="tel" id="phone" name="phone" required>
-          </div>
-          <div class="form-group">
-            <label for="education">Nivel académico</label>
-            <select id="education" name="education" required>
-              <option value="">Seleccionar nivel</option>
-              <option value="licenciatura">Licenciatura</option>
-              <option value="maestria">Maestría</option>
-              <option value="doctorado">Doctorado</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="institution">Institución educativa</label>
-            <input type="text" id="institution" name="institution" required>
-          </div>
-          <div class="form-group">
-            <label for="proposal">Propuesta o idea de proyecto (máx. 500 caracteres)</label>
-            <textarea id="proposal" name="proposal" maxlength="500" required></textarea>
-            <div class="char-count"><span id="char-count">0</span>/500</div>
-          </div>
-          <div class="form-group">
-            <label for="cv">CV o resumen curricular (URL a Drive, Dropbox, etc.)</label>
-            <input type="url" id="cv" name="cv" placeholder="https://">
-          </div>
-          <div class="form-actions">
-            <button type="button" class="btn btn-outline form-cancel-btn">Cancelar</button>
-            <button type="submit" class="btn btn-primary">Enviar aplicación</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <!-- Featured Products Section -->
-    <section id="produccion" class="section section-alt">
+    <section id="estudiantes" class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Producción Destacada</h2>
+          <h2 class="section-title">Estudiantes</h2>
           <div class="section-separator"></div>
-          <p class="section-subtitle">Proyectos, prototipos y sistemas desarrollados en nuestro laboratorio</p>
         </div>
-        <div class="products-grid">
-          <!-- Product 1 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img
-                src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Sistema de monitoreo agrícola">
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">Sistema de monitoreo agrícola basado en IoT</h3>
-              <p class="product-description">Sistema integral para el monitoreo de variables agroclimáticas en tiempo
-                real mediante una red de sensores inalámbricos.</p>
-              <a href="#" class="btn btn-text">Ver detalles <i class="fas fa-arrow-right"></i></a>
+        <div class="section-content">
+          <div class="team-card">
+            <div class="team-info">
+              <h3>Estudiantes de PosDoctorado</h3>
+              <p class="team-position">Dra. Arantza Elena Sánchez Gutiérrez 
+                <span class="ms-4">
+                  <i class="fas fa-robot text-info me-2" title="Inteligencia Artificial Aplicada"></i>
+                  <i class="fas fa-tractor text-success" title="Tecnología Agroalimentaria"></i>
+                </span>
+              </p>
             </div>
           </div>
-
-          <!-- Product 2 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img
-                src="https://images.pexels.com/photos/5214414/pexels-photo-5214414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Sistema de monitoreo estructural">
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">Sistema de monitoreo estructural para edificios</h3>
-              <p class="product-description">Plataforma para el monitoreo continuo de la integridad estructural en
-                edificios mediante sensores de vibración y deformación.</p>
-              <a href="#" class="btn btn-text">Ver detalles <i class="fas fa-arrow-right"></i></a>
+          <div class="py-2"></div>
+          <div class="team-card">
+            <div class="team-info">
+              <h3>Estudiantes Doctorado</h3>
+              <p class="team-position">Jesús Gerardo Ávila Sánchez 
+                <span class="ms-4">
+                  <i class="fas fa-microchip text-info me-2" title="Computación de Alto Desempeño"></i>
+                  <i class="fas fa-robot text-info me-2" title="Inteligencia Artificial Aplicada"></i>
+                  <i class="fas fa-tractor text-success me-2" title="Tecnología Agroalimentaria"></i>
+                  <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
+                </span>
+              </p>
+              <p class="team-position">Félix Fernando López Aguilera 
+                <span class="ms-4">
+                  <i class="fas fa-tractor text-success" title="Tecnología Agroalimentaria"></i>
+                </span>
+              </p>
+              <p class="team-position">Manuel Rivera Escobedo 
+                <span class="ms-4">
+                  <i class="fas fa-robot text-info me-2" title="Inteligencia Artificial Aplicada"></i>
+                  <i class="fas fa-tractor text-success" title="Tecnología Agroalimentaria"></i>
+                </span>
+              </p>
+              <p class="team-position">Nancy Mayela Silva Martínez 
+                <span class="ms-4">
+                  <i class="fas fa-microchip text-info me-2" title="Computación de Alto Desempeño"></i>
+                  <i class="fas fa-tractor text-success" title="Tecnología Agroalimentaria"></i>
+                </span>
+              </p>
+              <p class="team-position">Jair Nájera Salaices 
+                <span class="ms-4">
+                  <i class="fas fa-microchip text-info me-2" title="Computación de Alto Desempeño"></i>
+                  <i class="fas fa-tractor text-success" title="Tecnología Agroalimentaria"></i>
+                </span>
+              </p>
+              <p class="team-position">Ruth Elizabeth Martínez Escobedo 
+                <span class="ms-4">
+                  <i class="fas fa-tractor text-success me-2" title="Tecnología Agroalimentaria"></i>
+                  <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
+                </span>
+              </p>
             </div>
           </div>
-
-          <!-- Product 3 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img
-                src="https://images.pexels.com/photos/5214549/pexels-photo-5214549.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Sistema de riego inteligente">
-            </div>
-            <div class="product-content">
-              <h3 class="product-title">Sistema de riego inteligente con optimización de recursos</h3>
-              <p class="product-description">Sistema de riego automatizado que utiliza algoritmos de inteligencia
-                artificial para optimizar el uso de recursos hídricos.</p>
-              <a href="#" class="btn btn-text">Ver detalles <i class="fas fa-arrow-right"></i></a>
+          <div class="py-2"></div>
+          <div class="team-card">
+            <div class="team-info">
+              <h3>Estudiantes Maestría</h3>
+              <p class="team-position">José Rosario Guerrero Flores 
+                <span class="ms-4">
+                  <i class="fas fa-robot text-info me-2" title="Inteligencia Artificial Aplicada"></i>
+                  <i class="fas fa-tractor text-success" title="Tecnología Agroalimentaria"></i>
+                </span>
+              </p>
+              <p class="team-position">Emmanuel Acosta Salinas 
+                <span class="ms-4">
+                  <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
+                </span>
+              </p>
+              <p class="team-position">Arturo Molina Almaráz 
+                <span class="ms-4">
+                  <i class="fas fa-tractor text-success me-2" title="Tecnología Agroalimentaria"></i>
+                  <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
+                </span>
+              </p>
+              <p class="team-position">Carlos Eduardo Olvera Mayorga 
+                <span class="ms-4">
+                  <i class="fas fa-microchip text-info me-2" title="Computación de Alto Desempeño"></i>
+                  <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
+                </span>
+              </p>
+              <p class="team-position">Valeria Andrea Escobedo Sánchez 
+                <span class="ms-4">
+                  <i class="fas fa-tractor text-success me-2" title="Tecnología Agroalimentaria"></i>
+                  <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
+                </span>
+              </p>
+              <p class="team-position">Aaron Carrillo Acuña 
+                <span class="ms-4">
+                  <i class="fas fa-tractor text-success me-2" title="Tecnología Agroalimentaria"></i>
+                  <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
+                </span>
+              </p>
+              <p class="team-position">Gabriel Rodríguez Sustaita 
+                <span class="ms-4">
+                  <i class="fas fa-robot text-info me-2" title="Inteligencia Artificial Aplicada"></i>
+                  <i class="fas fa-tractor text-success me-2" title="Tecnología Agroalimentaria"></i>
+                  <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
+                </span>
+              </p>
             </div>
           </div>
         </div>
@@ -678,141 +532,117 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contacto" class="section">
+    <section id="contacto" class="contact-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Contacto</h2>
+          <h2 class="section-title">Contáctanos</h2>
           <div class="section-separator"></div>
-          <p class="section-subtitle">Estamos a tu disposición para resolver cualquier duda o consulta</p>
         </div>
-        <div class="contact-container">
-          <div class="contact-info">
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div class="contact-text">
-                <h3>Dirección</h3>
+
+        <div class="contact-grid">
+          <!-- Información de contacto -->
+          <div class="contact-info-card">
+            <h3 class="contact-card-title">Información de contacto</h3>
+
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-method-content">
+                <h4>Ubicación</h4>
                 <p>Campus UAZ Siglo XXI, Edificio de Ingeniería II<br>Carretera Zacatecas-Guadalajara Km. 6<br>Ejido La
                   Escondida, Zacatecas, Zac. CP 98160</p>
               </div>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-              <div class="contact-text">
-                <h3>Correo electrónico</h3>
-                <p><a href="mailto:liai@uaz.edu.mx">liai@uaz.edu.mx</a></p>
+
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-method-content">
+                <h4>Correo electrónico</h4>
+                <p><a href="mailto:liai@uaz.edu.mx" class="contact-link">liai@uaz.edu.mx</a></p>
               </div>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-phone"></i></div>
-              <div class="contact-text">
-                <h3>Teléfono</h3>
-                <p>(+52) 492 925 6690 ext. 4030</p>
+
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-method-content">
+                <h4>Teléfono</h4>
+                <p><a href="tel:+524929256690" class="contact-link">(+52) 492 925 6690</a></p>
               </div>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-clock"></i></div>
-              <div class="contact-text">
-                <h3>Horario</h3>
-                <p>Lunes a Viernes<br>9:00 - 18:00 hrs</p>
+
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <i class="fas fa-clock"></i>
               </div>
-            </div>
-            <div class="social-links">
-              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <div class="contact-method-content">
+                <h4>Horario de atención</h4>
+                <p>Lunes a Viernes: 9:00 - 18:00 hrs</p>
+              </div>
             </div>
           </div>
-          <div class="contact-form-container">
-            <h3>Envíanos un mensaje</h3>
-            <form id="contact-form">
-              <div class="form-group">
-                <label for="contact-name">Nombre</label>
-                <input type="text" id="contact-name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="contact-email">Correo electrónico</label>
-                <input type="email" id="contact-email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="contact-subject">Asunto</label>
-                <input type="text" id="contact-subject" name="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="contact-message">Mensaje</label>
-                <textarea id="contact-message" name="message" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-            </form>
+
+          <!-- Mapa -->
+          <div class="map-card">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.440302771499!2d-102.6459625!3d22.7721344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x868251f2614ad3af%3A0xd26d35967e83cb0b!2sUniversidad%20Aut%C3%B3noma%20de%20Zacatecas!5e0!3m2!1ses-419!2smx!4v1715652118000!5m2!1ses-419!2smx"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
-        </div>
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.440302771499!2d-102.6459625!3d22.7721344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x868251f2614ad3af%3A0xd26d35967e83cb0b!2sUniversidad%20Aut%C3%B3noma%20de%20Zacatecas!5e0!3m2!1ses-419!2smx!4v1715652118000!5m2!1ses-419!2smx"
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-logo">
-          <span>LIAI</span>
-          <span class="logo-separator">|</span>
-          <span class="logo-uaz">UAZ</span>
-          <p>Laboratorio de Invenciones Aplicadas a la Industria</p>
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span>LIAI</span>
+            <span class="logo-separator">|</span>
+            <span class="logo-uaz">UAZ</span>
+          </div>
+          <p class="footer-description">Laboratorio de Invenciones Aplicadas a la Industria</p>
+          <p class="footer-address">Campus UAZ Siglo XXI, Edificio de Ingeniería II<br>Zacatecas, Zac. CP 98160</p>
         </div>
+
         <div class="footer-links">
           <div class="footer-column">
-            <h4>Secciones</h4>
-            <ul>
-              <li><a href="#hero">Inicio</a></li>
-              <li><a href="#acerca">Acerca de</a></li>
-              <li><a href="#campos">Campos de Acción</a></li>
+            <h4 class="footer-title">Enlaces Rápidos</h4>
+            <ul class="footer-menu">
+              <li><a href="#acerca">Acerca del LIAI</a></li>
               <li><a href="#publicaciones">Publicaciones</a></li>
+              <li><a href="#integrantes">Nuestro Equipo</a></li>
+              <li><a href="#estudiantes">Estudiantes</a></li>
+              <li><a href="https://www.uaz.edu.mx" target="_blank" rel="noopener">Portal UAZ</a></li>
             </ul>
           </div>
+
           <div class="footer-column">
-            <h4>Recursos</h4>
-            <ul>
-              <li><a href="#colaboradores">Colaboradores</a></li>
-              <li><a href="#vacantes">Vacantes</a></li>
-              <li><a href="#produccion">Producción</a></li>
-              <li><a href="#contacto">Contacto</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Enlaces UAZ</h4>
-            <ul>
-              <li><a href="https://www.uaz.edu.mx" target="_blank">Portal UAZ</a></li>
-              <li><a href="https://ingenieria.uaz.edu.mx" target="_blank">Unidad de Ingeniería</a></li>
-              <li><a href="#" target="_blank">Posgrado en Ingeniería</a></li>
-              <li><a href="#" target="_blank">Biblioteca</a></li>
+            <h4 class="footer-title">Contacto</h4>
+            <ul class="footer-contact">
+              <li><i class="fas fa-envelope"></i> <a href="mailto:liai@uaz.edu.mx">liai@uaz.edu.mx</a></li>
+              <li><i class="fas fa-phone"></i> <a href="tel:+524929256690">(492) 925 6690</a></li>
+              <li><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 - 18:00 hrs</li>
             </ul>
           </div>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p>&copy; 2025 Laboratorio de Invenciones Aplicadas a la Industria - Universidad Autónoma de Zacatecas. Todos
-          los derechos reservados.</p>
+        <div class="footer-legal">
+          <p>&copy; 2025 LIAI - UAZ. Todos los derechos reservados.</p>
+        </div>
       </div>
     </div>
   </footer>
-
-  <!-- Success Message Modal -->
-  <div class="success-modal">
-    <div class="success-modal-content">
-      <i class="fas fa-check-circle"></i>
-      <h3>¡Envío exitoso!</h3>
-      <p>Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo a la brevedad.</p>
-      <button class="btn btn-primary success-close-btn">Aceptar</button>
-    </div>
-  </div>
-
   <script src="js/main.js" type="module"></script>
 </body>
 

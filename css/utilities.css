@@ -248,3 +248,27 @@
 @media (min-width: 1200px) {
   .d-none-xl { display: none !important; }
 }
+
+/* Column utilities */
+.cols-2 {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  column-gap: 2.4rem;
+}
+
+.cols-3 {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
+  column-gap: 2.4rem;
+}
+
+@media (max-width: 768px) {
+  .cols-2,
+  .cols-3 {
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+  }
+}
