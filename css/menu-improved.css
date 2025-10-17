@@ -9,11 +9,12 @@
 } /* Logo en oro claro*/
 
 .logo-image {
-  height: 40px; /* Altura fija para el logo */
+  height: 70px; /* Altura fija para el logo */
   width: auto; /* Mantiene la proporción de aspecto */
   margin-right: 12px; /* Espacio entre el logo y el texto */
   transition: transform 0.3s ease; /* Transición suave al hacer hover */
 }
+
 
 /* Ajustes responsivos para el logo */
 @media (max-width: 768px) {

@@ -23,7 +23,10 @@
 .logo-uaz {
   color: #0a1f45;
 }
-
+.logo .logo-image {
+    height: 70px; /* <-- Ajusta este valor como necesites (ej. 40px, 60px) */
+    width: auto; /* Esto mantiene la proporción original */
+}
 /* Navigation */
 nav {
   display: flex;
