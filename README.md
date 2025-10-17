@@ -52,7 +52,8 @@ project/
 - **HTML5** y **CSS3** para la estructura y estilos del sitio.
 - **JavaScript** para la interactividad.
 - **Vite** como entorno de desarrollo y empaquetado rápido.
-- **Netlify** para despliegue continuo.
+- **Netlify** para despliegue continuo **SOLO PARA Pruebas**.
+- **DOCKER** para el deploy final dentro de los servidores de la UAZ
 - **Font Awesome** para iconos.
 
 ## Instalación y Uso
@@ -71,7 +72,28 @@ project/
    ```
 4. **Abrir en el navegador:**
    Visita `http://localhost:5173` (o el puerto que indique Vite).
+## Deploy Final
+## Despliegue con Docker y Nginx 🐳
 
+Este proyecto utiliza Docker para crear un entorno de producción autocontenido y portátil. Usamos una imagen oficial de Nginx como servidor web por su alta eficiencia y bajo consumo de recursos, ideal para servir sitios estáticos como este.
+
+### Cómo Ejecutar el Proyecto Localmente
+
+- **Tener Docker Desktop instalado y en ejecución.**
+1. **Clonar el repositorio:**
+   ```bash
+    git clone https://github.com/FedericoMtzBaez/Web_liai-uaz.git
+    cd Web_liai-uaz
+   ```
+2. **Construye la imagen de Docker:**
+   ```bash
+    docker build -t liai-uaz-web .
+   ```
+3. **Ejecuta el contenedor:**   
+   ```bash
+    docker run -d -p 8080:80 --name liai-web liai-uaz-web
+   ```
+4. **¡Listo! Abre tu navegador y visita http://localhost:8080 para ver el sitio en funcionamiento. 🎉**    
 ## Secciones Principales
 - **Inicio:** Presentación y carrusel de imágenes.
 - **Acerca de:** Información sobre el laboratorio.
