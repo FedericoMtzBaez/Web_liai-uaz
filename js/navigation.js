@@ -2,10 +2,22 @@
 export function setupNavigation() {
   const header = document.getElementById('header');
   const navMenu = document.querySelector('.nav-menu');
-  const menuBtn = document.querySelector('.mobile-menu-btn');
   const menuLinks = document.querySelectorAll('.nav-menu a');
   
-  // Manejar menús desplegables
+  function setActiveDropdownByPage() {
+    const currentUrl = window.location.href;
+    
+    if (currentUrl.includes('cuerpo_academico')) {
+      const secondDropdown = document.querySelector('.dropdown:nth-child(2) .dropdown-toggle');
+      if (secondDropdown) secondDropdown.classList.add('active');
+    } else {
+      const firstDropdown = document.querySelector('.dropdown:first-child .dropdown-toggle');
+      if (firstDropdown) firstDropdown.classList.add('active');
+    }
+  }
+
+  setActiveDropdownByPage();
+  
   let currentOpenDropdown = null;
   let closeTimeout = null;
   
@@ -14,7 +26,6 @@ export function setupNavigation() {
     const menu = dropdown.querySelector('.dropdown-menu');
     let isOpen = false;
     
-    // Función para cerrar el menú
     const closeMenu = () => {
       if (closeTimeout) {
         clearTimeout(closeTimeout);
@@ -80,30 +91,24 @@ export function setupNavigation() {
       }
     };
     
-    // Solo usar click para evitar conflictos
     toggle.addEventListener('click', handleToggle);
     
-    // Prevenir que el clic en el menú lo cierre
     menu.addEventListener('click', (e) => {
       e.stopPropagation();
     });
     
-    // Cerrar menú al hacer clic fuera
     document.addEventListener('click', (e) => {
-      // Solo cerrar si el clic no es en el dropdown actual
       if (!dropdown.contains(e.target) && isOpen) {
         closeMenu();
       }
     });
     
-    // Cerrar menú al hacer clic en un enlace del menú
     menu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         closeMenu();
       });
     });
     
-    // Mantener el menú abierto cuando se hace hover sobre él
     dropdown.addEventListener('mouseenter', () => {
       if (closeTimeout) {
         clearTimeout(closeTimeout);
@@ -111,18 +116,16 @@ export function setupNavigation() {
       }
     });
     
-    // Cerrar el menú cuando se sale del dropdown (con delay)
     dropdown.addEventListener('mouseleave', () => {
       if (isOpen) {
         closeTimeout = setTimeout(() => {
           closeMenu();
-        }, 300); // 300ms de delay
+        }, 300);
       }
     });
     
   });
   
-  // Cerrar menús al hacer scroll
   window.addEventListener('scroll', () => {
     document.querySelectorAll('.dropdown').forEach(dropdown => {
       dropdown.querySelector('.dropdown-menu').classList.remove('show');
@@ -137,7 +140,6 @@ export function setupNavigation() {
     }
   });
   
-  // Ajustar menús en redimensionamiento
   window.addEventListener('resize', () => {
     if (window.innerWidth <= 992) {
       document.querySelectorAll('.dropdown').forEach(dropdown => {
@@ -147,40 +149,7 @@ export function setupNavigation() {
       currentOpenDropdown = null;
     }
   });
-  
-  // Mobile menu toggle
-  if (menuBtn) {
-    menuBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      document.body.classList.toggle('menu-open');
-      
-      // Toggle aria-expanded attribute
-      const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-expanded', !isExpanded);
-    });
-  }
-  
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (navMenu && navMenu.classList.contains('active') && 
-        !navMenu.contains(e.target) && 
-        !menuBtn.contains(e.target)) {
-      navMenu.classList.remove('active');
-      document.body.classList.remove('menu-open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-    }
-  });
-  
-  // Close menu when clicking on a link
-  menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-      document.body.classList.remove('menu-open');
-      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
-    });
-  });
-  
-  // Smooth scrolling for navigation links
+    
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -199,42 +168,14 @@ export function setupNavigation() {
         top: offsetPosition,
         behavior: 'smooth'
       });
-      
-      // Update active link
-      menuLinks.forEach(link => link.classList.remove('active'));
-      this.classList.add('active');
     });
   });
   
-  // Update active menu item on scroll
-  const sections = document.querySelectorAll('section[id]');
-  
   window.addEventListener('scroll', () => {
-    let scrollPosition = window.scrollY + header.offsetHeight + 50;
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute('id');
-      
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        menuLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-    
-    // Handle hero section specially
-    if (scrollPosition < sections[0].offsetTop + sections[0].offsetHeight) {
-      menuLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#hero') {
-          link.classList.add('active');
-        }
-      });
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
     }
   });
 }

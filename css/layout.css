@@ -20,7 +20,7 @@
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  height: 8rem;
+  height: 6rem;
   display: flex;
   align-items: center;
 }
@@ -30,12 +30,6 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
-}
-
-/* Make header smaller on scroll */
-#header.scrolled {
-  height: 6rem;
-  background-color: rgba(255, 255, 255, 0.98);
 }
 
 /* Main content */
@@ -289,6 +283,20 @@ footer {
   .footer-links {
     gap: 3.2rem;
     flex-direction: column;
+  }
+}
+
+/* Small screens: make header height automatic so logo stay vertically centered */
+@media (max-width: 900px) {
+  #header {
+    height: auto;
+    padding: 0.6rem 0;
+  }
+  #header.scrolled {
+    height: auto;
+  }
+  #header .container {
+    align-items: center;
   }
 }
 

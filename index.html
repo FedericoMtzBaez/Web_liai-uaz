@@ -8,7 +8,6 @@
   <meta name="description"
     content="Laboratorio de Invenciones Aplicadas a la Industria (LIAI) de la Universidad Autónoma de Zacatecas">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/menu-improved.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -22,32 +21,40 @@
         </a>
       </div>
       <nav>
-        <button class="mobile-menu-btn" aria-label="Menú principal">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
         <ul class="nav-menu">
-          <li><a href="#hero" class="active">Inicio</a></li>
-          <li><a href="#acerca">Acerca</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Investigación <i class="fas fa-chevron-down dropdown-icon"></i></a>
+            <a href="#" class="dropdown-toggle">
+              <span class="dropdown-text">LIAI</span>
+              <span class="dropdown-text-short">LIAI</span>
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
             <ul class="dropdown-menu">
+              <li><a href="#acerca">Acerca</a></li>
               <li><a href="#campos">Campos de Acción</a></li>
               <li><a href="#publicaciones">Publicaciones</a></li>
               <li><a href="#propiedad">Propiedad Industrial</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Equipo <i class="fas fa-chevron-down dropdown-icon"></i></a>
-            <ul class="dropdown-menu">
               <li><a href="#integrantes">Integrantes</a></li>
               <li><a href="#colaboradores">Colaboradores</a></li>
               <li><a href="#estudiantes">Estudiantes</a></li>
             </ul>
           </li>
-          <li><a href="cuerpo_academico.html">Cuerpo Académico</a></li>
-          <li><a href="#contacto" class="btn btn-outline-primary btn-sm">Contacto</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <span class="dropdown-text">Cuerpo Académico</span>
+              <span class="dropdown-text-short">CA</span>
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="cuerpo_academico.html#descripcion">Descripción</a></li>
+              <li><a href="cuerpo_academico.html#proyectos">Proyectos y Vinculación</a></li>
+              <li><a href="cuerpo_academico.html#identificacion">Identificación</a></li>
+              <li><a href="cuerpo_academico.html#vision-mision">Visión y Misión</a></li>
+              <li><a href="cuerpo_academico.html#lgac">Líneas de Investigación</a></li>
+              <li><a href="cuerpo_academico.html#integrantes-ca">Integrantes</a></li>
+              <li><a href="cuerpo_academico.html#produccion-academica">Producción Académica</a></li>
+            </ul>
+          </li>
+          <li><a href="#contacto" class="contact-btn"><i class="fas fa-headset" title="Contacto"></i></a></li>
         </ul>
       </nav>
     </div>
@@ -58,8 +65,7 @@
     <section id="hero" class="hero">
       <div class="hero-carousel">
         <div class="carousel-container">
-          <div class="carousel-slide active"
-            style="background-image: url('logos/uazFoto.jpeg')">
+          <div class="carousel-slide active" style="background-image: url('logos/uazFoto.jpeg')">
             <div class="carousel-content">
               <h1>Laboratorio de Invenciones Aplicadas a la Industria</h1>
               <p>Innovación y desarrollo tecnológico al servicio de la sociedad</p>
@@ -329,11 +335,6 @@
             <div class="team-info">
               <h3>Dr. Carlos Alberto Olvera Olvera</h3>
               <p class="team-position">Profesor Investigador Responsable</p>
-              <div class="team-social">
-                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="#" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              </div>
             </div>
           </div>
 
@@ -342,11 +343,6 @@
             <div class="team-info">
               <h3>Dr. Manuel de Jésus López Martínez </h3>
               <p class="team-position">Profesor Investigador Asociado</p>
-              <div class="team-social">
-                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="#" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              </div>
             </div>
           </div>
         </div>
@@ -428,7 +424,7 @@
           <div class="team-card">
             <div class="team-info">
               <h3>Estudiantes de PosDoctorado</h3>
-              <p class="team-position">Dra. Arantza Elena Sánchez Gutiérrez 
+              <p class="team-position">Dra. Arantza Elena Sánchez Gutiérrez
                 <span class="ms-4">
                   <i class="fas fa-robot text-info me-2" title="Inteligencia Artificial Aplicada"></i>
                   <i class="fas fa-tractor text-success" title="Tecnología Agroalimentaria"></i>
@@ -440,7 +436,7 @@
           <div class="team-card">
             <div class="team-info">
               <h3>Estudiantes Doctorado</h3>
-              <p class="team-position">Jesús Gerardo Ávila Sánchez 
+              <p class="team-position">Jesús Gerardo Ávila Sánchez
                 <span class="ms-4">
                   <i class="fas fa-microchip text-info me-2" title="Computación de Alto Desempeño"></i>
                   <i class="fas fa-robot text-info me-2" title="Inteligencia Artificial Aplicada"></i>
@@ -448,30 +444,30 @@
                   <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
                 </span>
               </p>
-              <p class="team-position">Félix Fernando López Aguilera 
+              <p class="team-position">Félix Fernando López Aguilera
                 <span class="ms-4">
                   <i class="fas fa-tractor text-success" title="Tecnología Agroalimentaria"></i>
                 </span>
               </p>
-              <p class="team-position">Manuel Rivera Escobedo 
+              <p class="team-position">Manuel Rivera Escobedo
                 <span class="ms-4">
                   <i class="fas fa-robot text-info me-2" title="Inteligencia Artificial Aplicada"></i>
                   <i class="fas fa-tractor text-success" title="Tecnología Agroalimentaria"></i>
                 </span>
               </p>
-              <p class="team-position">Nancy Mayela Silva Martínez 
+              <p class="team-position">Nancy Mayela Silva Martínez
                 <span class="ms-4">
                   <i class="fas fa-microchip text-info me-2" title="Computación de Alto Desempeño"></i>
                   <i class="fas fa-tractor text-success" title="Tecnología Agroalimentaria"></i>
                 </span>
               </p>
-              <p class="team-position">Jair Nájera Salaices 
+              <p class="team-position">Jair Nájera Salaices
                 <span class="ms-4">
                   <i class="fas fa-microchip text-info me-2" title="Computación de Alto Desempeño"></i>
                   <i class="fas fa-tractor text-success" title="Tecnología Agroalimentaria"></i>
                 </span>
               </p>
-              <p class="team-position">Ruth Elizabeth Martínez Escobedo 
+              <p class="team-position">Ruth Elizabeth Martínez Escobedo
                 <span class="ms-4">
                   <i class="fas fa-tractor text-success me-2" title="Tecnología Agroalimentaria"></i>
                   <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
@@ -483,42 +479,42 @@
           <div class="team-card">
             <div class="team-info">
               <h3>Estudiantes Maestría</h3>
-              <p class="team-position">José Rosario Guerrero Flores 
+              <p class="team-position">José Rosario Guerrero Flores
                 <span class="ms-4">
                   <i class="fas fa-robot text-info me-2" title="Inteligencia Artificial Aplicada"></i>
                   <i class="fas fa-tractor text-success" title="Tecnología Agroalimentaria"></i>
                 </span>
               </p>
-              <p class="team-position">Emmanuel Acosta Salinas 
+              <p class="team-position">Emmanuel Acosta Salinas
                 <span class="ms-4">
                   <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
                 </span>
               </p>
-              <p class="team-position">Arturo Molina Almaráz 
+              <p class="team-position">Arturo Molina Almaráz
                 <span class="ms-4">
                   <i class="fas fa-tractor text-success me-2" title="Tecnología Agroalimentaria"></i>
                   <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
                 </span>
               </p>
-              <p class="team-position">Carlos Eduardo Olvera Mayorga 
+              <p class="team-position">Carlos Eduardo Olvera Mayorga
                 <span class="ms-4">
                   <i class="fas fa-microchip text-info me-2" title="Computación de Alto Desempeño"></i>
                   <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
                 </span>
               </p>
-              <p class="team-position">Valeria Andrea Escobedo Sánchez 
+              <p class="team-position">Valeria Andrea Escobedo Sánchez
                 <span class="ms-4">
                   <i class="fas fa-tractor text-success me-2" title="Tecnología Agroalimentaria"></i>
                   <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
                 </span>
               </p>
-              <p class="team-position">Aaron Carrillo Acuña 
+              <p class="team-position">Aaron Carrillo Acuña
                 <span class="ms-4">
                   <i class="fas fa-tractor text-success me-2" title="Tecnología Agroalimentaria"></i>
                   <i class="fas fa-tools text-warning" title="Diseño funcional y prototipado"></i>
                 </span>
               </p>
-              <p class="team-position">Gabriel Rodríguez Sustaita 
+              <p class="team-position">Gabriel Rodríguez Sustaita
                 <span class="ms-4">
                   <i class="fas fa-robot text-info me-2" title="Inteligencia Artificial Aplicada"></i>
                   <i class="fas fa-tractor text-success me-2" title="Tecnología Agroalimentaria"></i>

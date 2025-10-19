@@ -4,6 +4,5 @@
 @import 'layout.css';
 @import 'components.css';
 @import 'utilities.css';
-
-/* Import animations */
+@import 'menu-improved.css';
 @import 'animations.css';

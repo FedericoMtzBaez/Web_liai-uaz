@@ -177,19 +177,3 @@
   opacity: 1;
   transform: translate(0);
 }
-
-/* Animation for count up */
-@keyframes countUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.count-animation {
-  animation: countUp 1s ease forwards;
-}
