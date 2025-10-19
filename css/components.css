@@ -1,5 +1,21 @@
 /* Components styles */
 
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Logo */
 header .logo a {
   display: flex;
@@ -34,30 +50,6 @@ header .logo-separator {
 
 header .logo-uaz {
   color: #0a1f45;
-}
-
-@media (max-width: 768px) {
-  header .logo a {
-    font-size: 28px;
-    gap: 16px;
-  }
-  
-  header#header .container .logo a > .logo-image {
-    width: 160px !important;
-    height: auto !important;
-  }
-}
-
-@media (max-width: 480px) {
-  header .logo a {
-    font-size: 24px;
-    gap: 12px;
-  }
-  
-  header#header .container .logo a > .logo-image {
-    width: 80px !important;
-    height: auto !important;
-  }
 }
 
 /* Navigation */
