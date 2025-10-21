@@ -1327,3 +1327,15 @@ textarea.form-control {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+.scholar-link {
+    margin-left: 0.8rem;  /* Espacio entre el nombre y el icono */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: #336699;        /* Color del icono (un azul de tu paleta) */
+    font-size: 0.9em;       /* Hace el icono un poco más pequeño que el texto */
+    transition: color 0.3s ease;
+}
+
+.scholar-link:hover {
+    color: #0a1f45;        /* Color al pasar el mouse (azul oscuro de tu paleta) */
+}
