@@ -1,11 +1,11 @@
 const BANNERS_DATA = [
     {
-        img: '../banners/baner1.png',
+        img: 'banners/baner1.png',
         link: null,
         alt: 'Banner 1'
     },
     {
-        img: '../banners/baner2.png',
+        img: 'banners/baner2.png',
         link: null,
         alt: 'Banner 2'
     },
