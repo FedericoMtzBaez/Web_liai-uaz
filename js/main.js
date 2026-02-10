@@ -5,6 +5,7 @@ import { setupTabs } from './tabs.js';
 import { setupCollapsibles } from './collapsibles.js';
 import { setupForms } from './forms.js';
 import { setupAnimations } from './animations.js';
+import { setupBanners } from './banners.js';
 
 // DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCollapsibles();
   setupForms();
   setupAnimations();
+  setupBanners();
 });
