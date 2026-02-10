@@ -1,24 +1,24 @@
 // Forms functionality
 export function setupForms() {
   setupContactForm();
-  setupVacancyForm();
-  setupCharacterCounter();
+  setupVacancyForm();      // Ahora ya no dará error
+  setupCharacterCounter(); // Ahora ya no dará error
 }
 
 // Contact form
 function setupContactForm() {
   const contactForm = document.getElementById('contact-form');
-  
+
   if (!contactForm) return;
-  
+
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     // Simulate form submission
     setTimeout(() => {
       // Show success message
       showSuccessModal();
-      
+
       // Reset form
       contactForm.reset();
     }, 1000);
@@ -29,13 +29,13 @@ function setupContactForm() {
 function showSuccessModal() {
   const successModal = document.querySelector('.success-modal');
   const closeBtn = document.querySelector('.success-close-btn');
-  
+
   if (!successModal) return;
-  
+
   // Show success modal
   successModal.classList.add('active');
   document.body.style.overflow = 'hidden'; // Prevent scrolling
-  
+
   // Close success modal when close button is clicked
   if (closeBtn) {
     closeBtn.addEventListener('click', () => {
@@ -43,7 +43,7 @@ function showSuccessModal() {
       document.body.style.overflow = ''; // Re-enable scrolling
     });
   }
-  
+
   // Close success modal when clicking outside
   successModal.addEventListener('click', (e) => {
     if (e.target === successModal) {
@@ -51,7 +51,7 @@ function showSuccessModal() {
       document.body.style.overflow = ''; // Re-enable scrolling
     }
   });
-  
+
   // Close success modal with Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && successModal.classList.contains('active')) {
@@ -59,7 +59,7 @@ function showSuccessModal() {
       document.body.style.overflow = ''; // Re-enable scrolling
     }
   });
-  
+
   // Automatically close after 5 seconds
   setTimeout(() => {
     if (successModal.classList.contains('active')) {
@@ -67,4 +67,16 @@ function showSuccessModal() {
       document.body.style.overflow = ''; // Re-enable scrolling
     }
   }, 5000);
+}
+
+// --- FUNCIONES FALTANTES AGREGADAS (STUBS) ---
+
+function setupVacancyForm() {
+  // Lógica pendiente para el formulario de vacantes
+  // console.log("Formulario de vacantes aún no implementado");
+}
+
+function setupCharacterCounter() {
+  // Lógica pendiente para el contador de caracteres
+  // console.log("Contador de caracteres aún no implementado");
 }
