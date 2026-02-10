@@ -71,7 +71,7 @@
 
 @media (max-width: 768px) {
   .banner-carousel-wrapper {
-    background-color: transparent;
+    background-color: transparent !important;
     aspect-ratio: 16/9; /* Cambiar proporción en móviles si es necesario */
 
   }
